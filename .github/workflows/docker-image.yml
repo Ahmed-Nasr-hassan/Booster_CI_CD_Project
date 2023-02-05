@@ -16,5 +16,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag ahmednasrhassan/django-ci-cd:v1.0
-           docker login -u ahmednasrhassan -p $dockerhub-password
+           && docker login -u ahmednasrhassan -p ${{ secrets.dockerhub-password }}
       
